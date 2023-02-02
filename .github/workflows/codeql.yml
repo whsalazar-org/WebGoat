@@ -69,10 +69,7 @@ jobs:
         path: ~/.m2
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2-
-        
-    - if: matrix.language == 'java'  
-      name: Build with Maven
-      run: mvn --no-transfer-progress verify
+
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, Go, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
