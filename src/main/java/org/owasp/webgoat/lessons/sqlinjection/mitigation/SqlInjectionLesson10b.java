@@ -60,8 +60,6 @@ public class SqlInjectionLesson10b extends AssignmentEndpoint {
     try {
       if (editor.isEmpty()) return failed(this).feedback("sql-injection.10b.no-code").build();
 
-      editor = editor.replaceAll("\\<.*?>", "");
-
       String regexSetsUpConnection = "(?=.*getConnection.*)";
       String regexUsesPreparedStatement = "(?=.*PreparedStatement.*)";
       String regexUsesPlaceholder = "(?=.*\\=\\?.*|.*\\=\\s\\?.*)";
