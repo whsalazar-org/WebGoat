@@ -62,6 +62,7 @@ public class ProfileZipSlip extends ProfileUploadBase {
     cleanupAndCreateDirectoryForUser();
     var currentImage = getProfilePictureAsBase64();
 
+    // testing vulnerable code autofix
     try {
       var uploadedZipFile = tmpZipDirectory.resolve(file.getOriginalFilename());
       FileCopyUtils.copy(file.getBytes(), uploadedZipFile.toFile());
